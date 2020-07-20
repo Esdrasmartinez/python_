@@ -1,0 +1,7 @@
+name = input('Ingresa tu nombre: ')
+print (f'Bienvenido:  {name}')
+print (f'Tu nombre tiene: {len(name)}caracteres ingrese el intervalo para verlos en especifico')
+print('NOTA: tome en cuenta el numero de caracteres de su nombre')
+start = int(input('Caracter inicial:  '))
+final = int(input('Caracter final:  '))
+print(name[start:final])
