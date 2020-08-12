@@ -1,25 +1,21 @@
-def morral(tamaño,pesos,valores,n):
-    if n == 0 or tamaño_morral == 0:
+
+def morral(tamano_morral, pesos, valores, n):
+
+    if n == 0 or tamano_morral == 0:
         return 0
 
-    if pesos[n - 1] > tamaño_morral:
-        morral(tamaño_morral,pesos,valores,n - 1)
-    print('Valor posicion',n-1,' es ', valores[n -1])
-    print('Peso posicion', n -1, ' es ',pesos[n -1])
+    if pesos[n - 1] > tamano_morral:
+        return morral(tamano_morral, pesos, valores, n - 1)
 
-    print('Valor delñ return iteracion: ',n - 1,' ',morral(tamaño_morral,pesos,valores,n - 1))
-    return max(valores[n - 1] + morral(tamaño_morral - pesos[n -1], pesos,valores, n -1) , 
-            morral(tamaño_morral, pesos,valores, n - 1))
-    
-    
+    return max(valores[n - 1] + morral(tamano_morral - pesos[n - 1], pesos, valores, n - 1),
+                morral(tamano_morral, pesos, valores, n - 1))
 
 
-
-if __name__ == "__main__":
-    valores = [60,100,120]
-    pesos = [10,20,30]
-    tamaño_morral = 50
+if __name__ == '__main__':
+    valores = [60, 100, 120]
+    pesos = [10, 20, 30]
+    tamano_morral = 50
     n = len(valores)
 
-    resultado = morral(tamaño_morral,pesos,valores,n)
+    resultado = morral(tamano_morral, pesos, valores, n)
     print(resultado)

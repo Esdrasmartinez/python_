@@ -6,15 +6,15 @@ def factoral(n):
     n= int
     returns n! 
     """ 
-    
-    print(n)
-    if(n == 1):
-       
-        return 1
 
-   
+    if n == 1:
+        return 1
+        
+    print(n)
+
     return n * factoral(n - 1)
     
 
 n = int(input('Ingresa un numero entero positivo: '))
 print(factoral(n))
+
